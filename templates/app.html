@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Temperature Calculator</title>
+    <link 
+        rel='stylesheet'
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        />
+    <style>
+        .alert {
+            background: green;
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+            margin: 1rem;
+        }
+    </style>
+</head>
+    <div class="container">
+    <h3>
+        Temperature Converter
+    </h3>
+     </div>
+ <!-- Form -->
+ <div class="container">
+    <form action="/send" method="POST">
+      <label for="Input Temperature">Input Temperature</label>
+      <input
+        type="text"
+        placeholder="input_temp"
+        class="u-full-width"
+        name="input_temp"
+      />
+
+      <label for="Input Temperature Unit">Input Temperature Unit</label>
+      <input
+        type="text"
+        placeholder="Input Temperature Unit"
+        class="u-full-width"
+        name="input_temp_unit"
+      />
+      <label for="Output Temperature Unit">Output Temperature Unit</label>
+      <input
+        type="text"
+        placeholder="Output Temperature Unit"
+        class="u-full-width"
+        name="output_temp_unit"
+      />
+      <label for="Student Response">Student Response</label>
+      <input
+        type="text"
+        placeholder="Student Response"
+        class="u-full-width"
+        name="student_response"
+      />
+      <!-- <label for="Operation">Operation</label>
+      <select class="u-full-width" name="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+      </select> -->
+
+
+      <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ sum }}
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
